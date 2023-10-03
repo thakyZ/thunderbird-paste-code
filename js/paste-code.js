@@ -23,7 +23,7 @@ browser.menus.onClicked.addListener(async (info, tab) => {
 
                     const table = document.createElement("table");
                     table.setAttribute("border", "0");
-                    table.setAttribute("bgcolor", "#efefef");
+                    table.setAttribute("bgcolor", "#f3f3f3");
                     table.setAttribute("cellpadding", "0");
                     table.setAttribute("cellspacing", "10");
                     table.setAttribute("width", "100%")
@@ -31,16 +31,16 @@ browser.menus.onClicked.addListener(async (info, tab) => {
 
                     const tr = document.createElement("tr");
                     const td = document.createElement("td");
-                    td.setAttribute("bgcolor", "#efefef");
-                    // td.setAttribute("bordercolor", "#efefef")
                     let code = document.createElement("code");
-                    code.setAttribute("style", "white-space: pre-wrap;");
 
-                    code.textContent = text;
+                    code.innerHTML = text.replaceAll(/</g, "&lt;").replace(/\r?\n/g, "<br>");
                     table.appendChild(tr);
                     tr.appendChild(td);
                     td.appendChild(code);
                     document.body.appendChild(table);
+
+                    // adding line break at the end, otherwise it is not possible to get the cursor below the code table
+                    document.body.appendChild(document.createElement("br"));
 
                     let html = new XMLSerializer().serializeToString(document);
                     browser.compose.setComposeDetails(tab.id, { body: html });
