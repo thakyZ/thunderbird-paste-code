@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Paste code",
+    "description": "A context menu option that pastes code in beautiful HTML",
+    "version": "0.1",
+    "author": "Paul Wellner Bou",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "pastecode@wellnerbou.de",
+            "strict_min_version": "78.0"
+        }
+    },
+    "permissions": [
+        "compose",
+        "menus",
+        "menus.overrideContext",
+        "clipboardRead"
+    ],
+    "background": {
+        "scripts": [
+            "js/paste-code.js"
+        ]
+    }
+}
