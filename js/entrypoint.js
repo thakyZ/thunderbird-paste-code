@@ -34,7 +34,7 @@ browser.menus.onClicked.addListener(async (info, tab) => {
                     let code = document.createElement("code");
 
                     text = highlight.highlight(text.replaceAll(/</g, "&lt;"))
-                    text = text.replaceAll(" ", "&nbsp;").replace(/\r?\n/g, "<br>\n");
+                    text = text.replaceAll("  ", "&nbsp;&nbsp;").replace(/\r?\n/g, "<br>\n");
                     code.innerHTML = text
 
                     table.appendChild(tr);
