@@ -1,0 +1,22 @@
+{
+  "name": "paste-code",
+  "version": "0.1",
+  "description": "Thunderbird addon creating a context menu option that pastes code beautifully in HTML messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulwellnerbou/thunderbird-paste-code.git"
+  },
+  "author": "Paul Wellner Bou <paul@wellnerbou.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulwellnerbou/thunderbird-paste-code/issues"
+  },
+  "homepage": "https://github.com/paulwellnerbou/thunderbird-paste-code#readme",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
