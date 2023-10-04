@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Paste code",
-    "description": "A context menu option that pastes code in beautiful HTML",
+    "description": "Thunderbird addon creating a context menu option that pastes code beautifully in HTML messages",
     "version": "0.1",
     "author": "Paul Wellner Bou",
     "browser_specific_settings": {
@@ -13,12 +13,9 @@
     "permissions": [
         "compose",
         "menus",
-        "menus.overrideContext",
         "clipboardRead"
     ],
     "background": {
-        "scripts": [
-            "js/paste-code.js"
-        ]
+        "page": "background.html"
     }
 }
