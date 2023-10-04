@@ -11,8 +11,8 @@
         }
     },
     "permissions": [
-        "compose",
         "menus",
+        "compose",
         "clipboardRead"
     ],
     "background": {
