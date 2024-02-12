@@ -8,6 +8,9 @@ browser.menus.create(
     }
 );
 
+const isDarkMode = true;
+const noShadow = true;
+
 browser.menus.onClicked.addListener(async (info, tab) => {
     switch (info.menuItemId) {
         case "paste-code":
@@ -23,11 +26,11 @@ browser.menus.onClicked.addListener(async (info, tab) => {
 
                     const table = document.createElement("table");
                     table.setAttribute("border", "0");
-                    table.setAttribute("bgcolor", "#f3f3f3");
+                    table.setAttribute("bgcolor", isDarkMode ? "#181818" : "#f3f3f3");
                     table.setAttribute("cellpadding", "0");
                     table.setAttribute("cellspacing", "10");
                     table.setAttribute("width", "100%")
-                    table.setAttribute("style", "box-shadow: 0px 10px 5px -5px #bbbbbb; border-radius: 5px;")
+                    table.setAttribute("style", (noShadow ? "" : "box-shadow:0px 10px 5px -5px #bbbbbb;") + "border-radius: 5px;")
 
                     const tr = document.createElement("tr");
                     const td = document.createElement("td");
